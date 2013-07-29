@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logging</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Logging</h1>
+        
+        <p>From time to time you may encounter unexpected issues while trying to 
+            run SOLA. Usually the error message will recommend a course of action, 
+            but occasionally you may encounter a technical issue that requires further 
+            investigation by the IT Support Team or another SOLA technical person. 
+            To assist that investigation you may be asked to provide a copy of the 
+            log files supporting SOLA. The logs capture exception information and 
+            status messages that can help a technical person to determine the cause 
+            of a particular issue.</p>
+        
+        
+        <p>This section describes the two types of logs available with SOLA; the 
+            SOLA Application Logs and Java Runtime Environment (JRE) logging. It 
+            also describes how to access information from those logs. </p>
+        
+        <h2>Java Runtime Environment (JRE) Logging</h2>
+        
+        <p>Each SOLA Web Start application (i.e. SOLA Desktop and SOLA Admin) 
+            creates an application log file on your local computer to capture 
+            exceptions and various status messages. You can find those log files 
+            at the following directory location <b>User Home Directory>/sola/logs</b>. </p>
+        
+        <p>The name of the log file will be DesktopApplication_<date>.log (for SOLA 
+            Desktop) or AdminApplication_<date>.log (for SOLA Admin). Simply open 
+            the appropriate log and copy the text from the log file into your 
+            email reply or issue ticket. </p>
+            
+        <p>JRE Logging is <b>not</b> turned on by default. You need to use the Java Control 
+            Panel to turn on the Java Console which can then be used to turn on 
+            JRE Logging as required. To turn on the Java Console and JRE Logging</p>
+        
+        <ol>
+            <li>From the Control Panel, choose the <b>Java</b> icon.</li>
+            <li>On the Java Control Panel, click the Advanced tab and expand the 
+                <b>Java console</b> node to select the <b>Show console</b> option.</li>
+            <li>Click the OK button to close the Java Control Panel and save changes.
+                <img style="width: 414px; height: 366px;" alt="" src="../images/java_control_panel_advanced.png"><br></li>
+            <li>Start the SOLA Web Start application by double clicking the appropriate 
+                desktop shortcut. You will notice the Java Console display along 
+                with the SOLA login page.</li>
+            <li>Click the Java Console so that it has focus and press <b>5</b>. 
+                The message <b>Trace level set to 5: all ...completed</b> should 
+                display in the console. Pressing 5 turns on logging to its maximum level. 
+                  <img style="width: 450px; height: 400px;" alt="" src="../images/java_console_with_logging.png"><br></li>  </li>
+            <li>As you use the SOLA application, messages will be output 
+                to the console. Repeat the actions that cause the issue to occur.</li>
+            <li>After successfully repeating the issue, click the <b>Copy</b> button on the Java Console and paste the contents of the JRE log into your email reply or issue ticket. </li>
+        </ol>
+        
+        <p>Be aware that JRE Logging will only be turned on for the duration of 
+            your current session. If you restart the SOLA Web Start application, 
+            JRE Logging will be turned off until you set the logging level in the 
+            Java Console. </p>
+                
+                
+    </body>
+</html>

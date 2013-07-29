@@ -12,50 +12,116 @@
     <mapID target="topic" url="images/topic.gif" />
 
 <!-- Topics -->
-
     <mapID target="overview" url="MainTopics/sola_overview.html" />
     <mapID target="license" url="MainTopics/licensing.html" />
+    <mapID target="screens" url="MainTopics/sola_screens.html" />
+    <mapID target="logging" url="MainTopics/logging.html" />
     <mapID target="issues" url="MainTopics/known_issues.html" />
-    <mapID target="1_blk_overview" url="MainTopics/sola_overview.html" />
+    <mapID target="sola_business_rules" url="MainTopics/sola_business_rules.html" />
+    <mapID target="finance_export_file_description" url="MainTopics/finance_export_description.html" />
     
-    
+    <mapID target="services" url="howtotopics/services.html" />
+    <mapID target="service_lifecycle" url="howtotopics/service_lifecycle.html" /> 
+    <mapID target="application_lifecycle" url="howtotopics/application_lifecycle.html" /> 
+    <mapID target="rrr" url="howtotopics/rrr.html" /> 
+    <mapID target="documents" url="howtotopics/documents.html" /> 
+    <mapID target="rrr" url="howtotopics/rrr.html" /> 
+    <mapID target="business_rules" url="howtotopics/business_rules.html" /> 
+
     <mapID target="dashboard_and_main_menu" url="howtotopics/dashboard_and_main_menu.html" />
     <mapID target="map_viewer" url="howtotopics/map_viewer.html" />
     <mapID target="application_search" url="howtotopics/application_search.html" />
     <mapID target="application_details" url="howtotopics/application_details.html" />  
-    <mapID target="application_lifecycle" url="howtotopics/application_lifecycle.html" /> 
-    <mapID target="service_lifecycle" url="howtotopics/service_lifecycle.html" /> 
+    <mapID target="application_forms" url="howtotopics/application_forms.html" />  
+    <mapID target="property_search" url="howtotopics/property_search.html" /> 
     <mapID target="property_details" url="howtotopics/property_details.html" /> 
+    <mapID target="lease_details" url="howtotopics/lease_details.html" /> 
+    <mapID target="sublease_details" url="howtotopics/sublease_details.html" /> 
+    <mapID target="mortgage_details" url="howtotopics/mortgage_details.html" /> 
+    <mapID target="servitude_details" url="howtotopics/servitude_details.html" /> 
+    <mapID target="document_search" url="howtotopics/document_search.html" /> 
+    <mapID target="party_search" url="howtotopics/party_search.html" /> 
+    <mapID target="party_details" url="howtotopics/party_details.html" /> 
+    <mapID target="user_profile" url="howtotopics/user_profile.html" /> 
+    <mapID target="dispute_details" url="howtotopics/dispute_details.html" /> 
+    <mapID target="finance_export" url="howtotopics/finance_export.html" /> 
+    <mapID target="document_registration" url="howtotopics/document_registration.html" /> 
     <mapID target="cadastre_change" url="howtotopics/cadastre_change.html" />
     <mapID target="redefine_cadastre" url="howtotopics/redefine_cadastre.html" />
-    <mapID target="linkProperty" url="howtotopics/linkProperty.html" />
-    <mapID target="share" url="howtotopics/share.html" />
     
 <!--Reference to the how tos-->
+    <mapID target="login" url="howtotopics/login.html" />
     <mapID target="change_language" url="howtotopics/change_language.html" />
     <mapID target="lodge_new_application" url="howtotopics/lodge_new_application.html" />
     <mapID target="edit_an_application" url="howtotopics/edit_an_application.html" />
     <mapID target="assign_an_application" url="howtotopics/assign_an_application.html" />
     <mapID target="unassign_an_application" url="howtotopics/unassign_an_application.html" />
+    <mapID target="calculate_fees" url="howtotopics/calculate_fees.html" />
+    <mapID target="cancel_withdraw_lapse_application" url="howtotopics/cancel_withdraw_lapse_application.html" />
+    <mapID target="add_edit_agents_banks" url="howtotopics/add_edit_agents_banks.html" />
+    <mapID target="map_sale" url="howtotopics/map_sale.html" />
+    <mapID target="print_location" url="howtotopics/print_location.html" />
+    <mapID target="view_lodgement_report" url="howtotopics/view_lodgement_report.html" />
+    <mapID target="finance_export" url="howtotopics/finance_export.html" />
+
     <mapID target="add_document" url="howtotopics/add_document.html" />
     <mapID target="attach_digital_document" url="howtotopics/attach_digital_document.html" />
-    <mapID target="calculate_fees" url="howtotopics/calculate_fees.html" />
+    <mapID target="add_file_attachment_new_document" url="howtotopics/add_file_attachment_new_document.html" />
+    <mapID target="add_file_attachment_existing_document" url="howtotopics/add_file_attachment_existing_document.html" />
+    <mapID target="link_to_power_of_attorney_and_notarial_bond" url="howtotopics/link_to_power_of_attorney_and_notarial_bond.html" />
+
+    <mapID target="application_for_lease_services" url="howtotopics/application_for_lease_services.html" />
+    <mapID target="grant_new_lease" url="howtotopics/grant_new_lease.html" />
+    <mapID target="transfer_lease" url="howtotopics/transfer_lease.html" />
+    <mapID target="change_lessee_name" url="howtotopics/change_lessee_name.html" />
+    <mapID target="endorsement" url="howtotopics/endorsement.html" />
+    <mapID target="renew_lease" url="howtotopics/renew_lease.html" />
+    <mapID target="vary_lease" url="howtotopics/vary_lease.html" />
+    <mapID target="surrender_lease" url="howtotopics/surrender_lease.html" />
+    <mapID target="terminate_lease" url="howtotopics/terminate_lease.html" />
+    <mapID target="new_and_vary_sublease" url="howtotopics/new_and_vary_sublease.html" />
+    <mapID target="consent_application" url="howtotopics/consent_application.html" />
+    <mapID target="ground_rent_exemption" url="howtotopics/ground_rent_exemption.html" />
+    <mapID target="add_parent_property" url="howtotopics/add_parent_property.html" />
+    
+
+    <mapID target="register_lease" url="howtotopics/register_lease.html" />
+    <mapID target="register_sublease" url="howtotopics/register_sublease.html" />
+    <mapID target="application_for_registration_services" url="howtotopics/application_for_registration_services.html" />
+    <mapID target="register_mortgage" url="howtotopics/register_mortgage.html" />
+    <mapID target="cancel_sublease" url="howtotopics/cancel_sublease.html" />
+    <mapID target="mortgage_sublease" url="howtotopics/mortgage_sublease.html" />
+    <mapID target="register_servitude" url="howtotopics/register_servitude.html" />
+    <mapID target="record_dispute" url="howtotopics/record_dispute.html" />
+    <mapID target="power_of_attorney" url="howtotopics/power_of_attorney.html" />
+    <mapID target="cancel_power_of_attorney" url="howtotopics/cancel_power_of_attorney.html" />
+    <mapID target="notarial_bond" url="howtotopics/notarial_bond.html" />
+    <mapID target="cancel_notarial_bond" url="howtotopics/cancel_notarial_bond.html" />
     <mapID target="verify_property_details" url="howtotopics/verify_property_details.html" />
-    <mapID target="cancel_withdraw_lapse_application" url="howtotopics/cancel_withdraw_lapse_application.html" />
-    <mapID target="add_location" url="howtotopics/add_location.html" />
-    <mapID target="add_ownership_details" url="howtotopics/add_ownership_details.html" />
-    <mapID target="add_mortgage" url="howtotopics/add_mortgage.html" />
-    <mapID target="add_simple_right" url="howtotopics/simpleRight.html" />
+    <mapID target="lost_deed" url="howtotopics/lost_deed.html" />
+    <mapID target="print_certified_copy" url="howtotopics/print_certified_copy.html" />
+
     <mapID target="perform_cadastre_change" url="howtotopics/perform_cadastre_change.html" />
     <mapID target="perform_redefine_cadastre" url="howtotopics/perform_redefine_cadastre.html" />
+    <mapID target="create_subplot" url="howtotopics/create_subplot.html" />
+    <mapID target="plan_image_for_digitising" url="howtotopics/plan_image_for_digitising.html" />
+    <mapID target="import_survey_data" url="howtotopics/import_survey_data.html" />
+
+
+<!-- Unused in SOLA Lesotho
+
+    <mapID target="add_location" url="howtotopics/add_location.html" />
+    <mapID target="add_ownership_details" url="howtotopics/add_ownership_details.html" />
+    <mapID target="add_simple_right" url="howtotopics/simpleRight.html" />
     <mapID target="change_boundary" url="howtotopics/change_boundary.html" />
     <mapID target="propertySearch" url="howtotopics/propertySearch.html" />
-    <mapID target="person" url="howtotopics/person.html" />
-    <mapID target="personSearch" url="howtotopics/personSearch.html" />
-    <mapID target="documentSearch" url="howtotopics/documentSearch.html" />
     <mapID target="transactionedDocument" url="howtotopics/transactionedDocument.html" />
+  -->   
+<!-- Unused Bulk Operations
     <mapID target="1_blk_importspatialpanel" url="howtotopics/1_blk_importspatialpanel.html" />
     <mapID target="1_blk_importsourcepanel" url="howtotopics/1_blk_importsourcepanel.html" />
+ -->
+<!-- Unused Systematic Registration
     <mapID target="sys_reg_rights_claim" url="howtotopics/sys_reg_rights_claim.html" />
     <mapID target="sys_reg_record_objections" url="howtotopics/sys_reg_record_objections.html" />
     <mapID target="sys_reg_record_resolutions" url="howtotopics/sys_reg_record_resolutions.html" />
@@ -63,4 +129,5 @@
     <mapID target="sys_reg_public_disp_plots" url="howtotopics/sys_reg_public_disp_plots.html" />
     <mapID target="sys_reg_certificates" url="howtotopics/sys_reg_certificates.html" />
     <mapID target="sys_reg_status_report" url="howtotopics/sys_reg_status_report.html" />
+ -->
  </map>

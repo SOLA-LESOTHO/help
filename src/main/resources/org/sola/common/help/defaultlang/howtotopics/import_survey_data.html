@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Import a Survey Data File</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Import a Survey Data File</h1>
+        
+        <p>When capturing survey plan data, you have the option of loading coordinate 
+            data directly from a Comma Separated Values (CSV) text file. The file must 
+            be a plain text file containing 3 columns of data. Those columns are</p>
+        
+        <ol>
+            <li>Number for the point</li>
+            <li>X ordinate</li>
+            <li>Y ordinate</li>
+        </ol>
+        
+        <p>Other rules that apply to the Survey Data File include:</p>
+        
+        <ul>
+            <li>Each column value must be sparated by a comma (,)</li>
+            <li>The first row of the file is treated as a header row and will be ignored</li>
+            <li>The file must have the .csv file extension (e.g. filename.csv)</li>
+        </ul>
+        
+        <p>The following illustrates a Survey Data File in CSV format (plain text)
+            containing 8 coordinate points. </p><br>
+        
+        <img style="width: 499px; height: 372px;" alt="" src="../images/survey_data_file.png"><br>
+        
+        <p>No transformation of the coordinates is performed during import. The 
+            coordinates must be in the same coordinate system as that used by the Map Viewer. </p>
+        
+        <p>To import the CSV file, you must first attach the file as a document to 
+            the application using the Add Documents functionality available on 
+            the Documents tab of the Application Details screen. You should also 
+            select Survey Data File as the document type for the new document.</p>
+        
+        <p>Once the CSV file has been attached to the application, Start the Change 
+            to Cadastre service and go to the Documents tab (displayed beside 
+            the Layers and Find tabs). Click the Add button to open the Select 
+            Document dialog and select the Survey Data File document from the application.        </p>
+        
+        <p>Next, select the Survey Data File document from the list of documents 
+            in the Documents tab.  If the attached CSV file has a .csv file extension, 
+            then the Add points button will become enabled. Click the Add points 
+            button to add the coordinates from the file. The new survey points 
+            will be displayed on the map. </p>
+        
+        <p>If the Add Points button does not become enabled when you select the 
+            Survey Data File document, verify that the document has a file attachment 
+            and that file has a .csv extension. </p>
+        
+               <p><b>Also See</b></p>
+        <ul>
+            <li><a href="map_viewer.html" target="_top">SOLA Map Viewer</a></li>
+            <li><a href="cadastre_change.html" target="_top">Cadastre Change</a></li>
+            <li><a href="add_document.html" target="_top">Add Document to an Application</a></li>
+            <li><a href="add_file_attachment_new_document.html" target="_top">Attach a File to a new Document</a></li>
+        </ul>
+        <br>
+
+    </body>
+</html>

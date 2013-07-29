@@ -6,95 +6,302 @@
 
   
 </head><body style="margin-left: 24px; width: 1040px;">
-<h1>Cadastre Change</h1>
+<h1>Change to Cadastre</h1>
 
-<p>The Cadastre Change screen allows you to subdivide/split or merge parcels. It can be 
-    accessed by starting a Cadastre Change service from the Application Details Service tab. 
+<p>The Change to Cadastre screen allows you to create new plots and subplots for 
+    lease purposes. The details for new plots can be obtained from a survey plan 
+    either by heads up digitizing from an image of the plan or by entering the 
+    coordinates for survey points. The Change to Cadastre screen can be accessed by 
+    <img style="width: 21px; height: 22px;" alt="" src="../images/start_again_icon.png">
+    starting the Change to Cadastre service from the Application Details Service tab.
 </p><br>
 
-<img style="width: 600px; height: 362px;" alt="" src="../images/23_cadastre_change.png"><br>
+<img style="width: 790px; height: 510px;" alt="" src="../images/23_cadastre_change.png"><br>
 
-<p>The Cadastre Change screen extends the SOLA Map Viewer with additional tools to aid spatial 
-    editing of parcels.  The additional tools provided are:</p>
+<p>The Change to Cadastre screen extends the SOLA Map Viewer with additional tools 
+    to aid spatial editing of plots. The additional tools provided are:</p>
 
 <ul>
 
-  <li>Select / Deselect Target Parcel <img style="width: 16px; height: 16px;" alt="" src="../images/24_target_parcel_icon.png"></li>
-  <li>Survey Points screen <img style="width: 16px; height: 16px;" alt="" src="../images/25_survey_points_list_icon.png"></li>
-  <li>Create / Link Survey Points <img style="width: 16px; height: 16px;" alt="" src="../images/26_survey_points_tool_icon.png"></li>
-  <li>Create New Parcel <img style="width: 16px; height: 16px;" alt="" src="../images/27_new_parcel_icon.png"></li>
-  <li>Parcel List screen <img style="width: 16px; height: 16px;" alt="" src="../images/28_parcel_list_icon.png"></li>
-  <li>Select a boundary to change <img style="width: 16px; height: 16px;" alt="" src="../images/56_select_boundary_icon.png"></li>
-  <li>Change selected boundary <img style="width: 16px; height: 16px;" alt="" src="../images/57_modify_boundary_icon.png"></li>
-  <li>Add  image <img style="width: 16px; height: 16px;" alt="" src="../images/58_add_image_icon.png"></li>
-  <li>Remove added image <img style="width: 16px; height: 16px;" alt="" src="../images/59_remove_image_icon.png"><br>
+  <li>Select / Deselect Target Parcel <img style="width: 21px; height: 18px;" alt="" src="../images/24_target_parcel_icon.png"></li>
+  <li>Survey Points screen <img style="width: 18px; height: 18px;" alt="" src="../images/25_survey_points_list_icon.png"></li>
+  <li>Create / Link Survey Points <img style="width: 21px; height: 13px;" alt="" src="../images/26_survey_points_tool_icon.png"></li>
+  <li>Create New Plot <img style="width: 24px; height: 20px;" alt="" src="../images/27_new_parcel_icon.png"></li>
+  <li>Parcel List screen <img style="width: 24px; height: 21px;" alt="" src="../images/28_parcel_list_icon.png"></li>
+  <li>Select a boundary to change <img style="width: 23px; height: 25px;" alt="" src="../images/56_select_boundary_icon.png"></li>
+  <li>Change selected boundary <img style="width: 27px; height: 28px;" alt="" src="../images/57_modify_boundary_icon.png"></li>
+  <li>Add  image <img style="width: 32px; height: 23px;" alt="" src="../images/58_add_image_icon.png"></li>
+  <li>Remove added image <img style="width: 32px; height: 21px;" alt="" src="../images/59_remove_image_icon.png"><br>
   </li>
 </ul>
 
-<p>Current functionality of the Cadastre Change is limited to simple parcels defined by a series 
-    of right lines, excluding natural boundaries defined by line segments.</p>
+<h2>Selecting the Coordinate System</h2>
+<p>Before capturing new plot details you must determine the coordinate system to 
+    use (either Lo27 or Lo29) and set it on the Map. This will ensure all data 
+    captured will be stored using the coordinate system you have chosen. Be aware 
+    that you may need to set the coordinate system every time you open the Map to 
+    capture new plot information. </p>
+
+<h2>Target Plots</h2>
+<p>Target plots are used to indicate the underlying plots that are being subdivided 
+    or amalgamated by a survey plan. Most survey plans in Lesotho identify new areas 
+    of land that have not previously been surveyed, so it will usually not be 
+    necessary to select target plots. 
+</p>   
+<p>    In cases where the survey plan does indicate that one or more underlying plots
+    are being subdivided or amalgamated, first locate the underlying plots on the 
+    map using the map search or the map navigation tools. Once located, use the 
+    Select / Deselect Target Plot tool
+    <img style="width: 16px; height: 16px;" alt="" src="../images/24_target_parcel_icon.png">
+    to select (or deselect) plots as required. Target plots will display with a 
+    dark blue border and light yellow fill. 
+</p>
+<p>    Target plots may also be used to assist with snapping a survey point for a 
+    new plot to the node of an adjacent plot. To do this, use the Select / Deselect 
+    Target Plot tool 
+     <img style="width: 16px; height: 16px;" alt="" src="../images/24_target_parcel_icon.png">
+    to select the existing plot that will share a boundary node with the new plot. 
+    Add the new survey point to the map and snap it to the appropriate node on 
+    the target plot. Once you have completed snapping the new survey points to 
+    the existing plot nodes, you must deselect the target plots. 
+
+</p>
+<p>    WARNING: Failing to deselect a target plot after you have completed snapping 
+    of the new survey points will cause the target plot to be removed from the map 
+    when the application is approved.
+
+</p>
 
 <h2>Survey Points</h2>
 
-<p>Survey points represent coordinates recorded on a survey plan. They can be located directly on 
-    the map via a single click with the the Create / Link Survey Points tool 
-    <img style="width: 16px; height: 16px;" alt="" src="../images/26_survey_points_tool_icon.png">
-    or the coordinates can be manually entered or modified using the Survey Points screen. 
-    To remove a survey point, select the point in the Survey Points screen and click 
-    the Remove button.</p> <br>
+<p>Survey points represent coordinates recorded on a survey plan. They can be located 
+    directly on the map via a single click with the Create / Link Survey Points tool 
+    <img style="width: 21px; height: 13px;" alt="" src="../images/26_survey_points_tool_icon.png">
+    loaded from a survey data file or the coordinates can be manually entered using 
+    the Survey Points screen which can be accessed using the Survey Points tool
+    <img style="width: 18px; height: 18px;" alt="" src="../images/25_survey_points_list_icon.png">
+</p> <br>
 
-<img style="width: 600px; height: 362px;" alt="" src="../images/29_survey_points.png"><br>
+<img style="width: 630px; height: 324px;" alt="" src="../images/29_survey_points.png"><br>
 
-<p>The Survey Points screen can be used to indicate if the new survey point is a boundary or 
-    not (e.g. a traverse point). A boundary point can be optionally linked to the coordinate 
-    point of a target parcel using the Create / Link Survey Points tool. Simply select the new 
-    boundary point and drag it close to the target parcel coordinate point. The new boundary point 
-    will snap to the location of the target parcel coordinate point and the blue cross will 
-    change to a green cross to confirm the linkage. The Survey Points screen also indicates 
-    when the boundary point is linked and it can be used to unlink a boundary point by 
-    unchecking the Is linked check box. </p> <br>
+<p>By default, new survey points are created as boundary points. You can change 
+    a survey point to a traverse point by clearing the Is boundary checkbox. 
+    Traverse points are displayed on the map as red triangles. 
+</p>
+
+<p>You can also link a boundary point to the node of a target plot using the 
+    Create / Link Survey Points tool
+    <img style="width: 21px; height: 13px;" alt="" src="../images/26_survey_points_tool_icon.png">
+    Simply select the new boundary point and drag it close to the target plot node. 
+    The new boundary point will snap to the location of the target plot node and 
+    the blue cross will change to a green cross to confirm the linkage. The Survey 
+    Points screen also indicates when the boundary point is linked. To unlink the 
+    boundary point, clear the Is linked check box.
+    
+</p>
+<p>If you need to delete a survey point that has been added in error, select the 
+    point from the list and click the Remove button.
+</p>
+ 
+<p>    Coordinate data can also be loaded from a Comma Separated Values (CSV) text 
+    file. Loading a CSV coordinate file requires attaching a .csv file as a document 
+    to the application and using the Add Points button on the Documents tab of 
+    Change to Cadastre to import the data. For details on the file format and the 
+    steps required to import a survey data file see Import a Survey Data File.
+
+</p> <br>
 
 <img style="width: 600px; height: 362px;" alt="" src="../images/30_node_linking.png">
 
-<h2>Parcels</h2>
 
-<p>The existing parcels you wish to edit (i.e. the target parcels) can be identified using the 
-    Select / Deselect Target Parcel tool 
-    <img style="width: 16px; height: 16px;" alt="" src="../images/24_target_parcel_icon.png">
-    and/or by referencing the appropriate property on the Application Details Property tab. 
-    Target parcels are highlighted with a blue border. Once you have added and linked the 
-    necessary survey points, you can create new parcels using the Create New Parcel tool
-    <img style="width: 16px; height: 16px;" alt="" src="../images/27_new_parcel_icon.png">
-    . Using the tool, single click each survey point of the new parcel in sequence in either 
-    a clockwise or anti-clockwise direction and double click on the final survey point to close 
-    the parcel boundary. The new parcel will display with a green border and yellow fill.</p> <br>
+<h2>Heads up Digitizing</h2>
 
-<img style="width: 600px; height: 362px;" alt="" src="../images/31_new_parcels.png"><br>
-
-<p>To edit the identifier for the new parcel, use the Parcel List tool  
-    <img style="width: 16px; height: 16px;" alt="" src="../images/28_parcel_list_icon.png">
-    to open the Parcel List screen and update the First and/or Last part of the parcel 
-    identifier. You can also use the Parcel List to remove a new parcel if you make a 
-    mistake while creating it. </p> <br>
-
- <img style="width: 600px; height: 362px;" alt="" src="../images/32_parcel_list.png"><br>
+    <p>To assist capturing the location of survey points from the plan, you can 
+        load an image of the survey plan onto the Map Viewer and use the mouse to 
+        capture the location of the new survey points. 
+</p>
+<p>        To add a plan image to the map you must first have an image file available 
+        on your local hard drive. The file formats supported by the Map Viewer are 
+        TIFF, PNG and JPEG. If you have an image in a different format (e.g. PDF), 
+        then you will need to convert the file to one of the accepted image formats 
+        before it can be displayed in the Map Viewer.
+</p>
+<p>        The Add Image tool
+        <img style="width: 32px; height: 23px;" alt="" src="../images/58_add_image_icon.png">
+       works by matching two points you select on the map with two points you select 
+       from the image. For the best match accuracy, the first node you select should 
+       be at the bottom left of the plan image and the second point at the top 
+       right (or top left and bottom right). The image is then scaled and displayed 
+       in the Map Viewer accordingly. 
+</p>
+<p>       Note that the current Add image tool does not rotate the image and requires 
+       the plan to have a standard North orientation. If the plan does not have 
+       a standard North orientation, use an appropriate imaging software package 
+       (e.g. Microsoft Office Picture Manager) to rotate the plan image so that 
+       North for the plan is the top of the computer screen before adding the 
+       image to the map. 
+</p>
+    
+    <h2>Creating New Plots</h2>
+    <p>You can create new plots using the Create New Plot tool  . Using the tool, 
+        single click each survey point of the new plot in sequence in either a 
+        clockwise or anti-clockwise direction and double click on the final survey 
+        point to close the plot boundary. You will then be prompted with the Plot 
+        properties dialog. <br>
+        <br>
+ <img style="width: 600px; height: 362px;" alt="" src="../images/plot_properties_dialog.png"><br>
  
- <h2>Approving a Cadastre Change</h2>
- <p>Changes made to the cadastre remain pending until the application containing the 
-     cadastre change service is approved. You can approve the application by completing 
-     all services on the application and approving the application using the Approve tool 
-     in the Application Details toolbar. The new parcels will then show as current parcels 
-     in the SOLA Map Viewer.
- </p><br>
-  <img style="width: 600px; height: 362px;" alt="" src="../images/33_approved_cadastre_change.png"><br>
-  
+    </p>
+ 
+    <p>   
+     Enter the appropriate details for the new plot. The most important 
+        information is the Type. In most cases this should be set to Parcel which 
+        will indicate the record is a new plot. Save the details when you have 
+        finished entering them and the map will redraw showing the new plot with 
+        a green border and yellow fill.  <br>
+        <br>
+        <img style="width: 790px; height: 510px;" alt="" src="../images/31_new_parcels.png"><br>
+ </p>
+ 
+ <p>If you make a mistake while forming the new parcel, right click to 
+        cancel the shape and start again. 
+ </p>
+    <h2>Plot Numbering</h2>
+    <p>
+       Plots are assigned a sequential number based on the grid in which they are 
+       located. You will note in the previous screen shot that the new plot is 
+       temporarily assigned the number tmp-2. SOLA will automatically assign the 
+       appropriate number for the new plot (or subplot) when you 
+       <img style="width: 20px; height: 21px;" alt="" src="../images/save_icon.png">
+       Save the Change to Cadastre. <br>
+       <br>
+       <img style="width: 790px; height: 510px;" alt="" src="../images/plots_with_assigned_numbers.png"><br>
+      
+    </p>
+    
+    <h2>Editing or Removing a New Plot</h2>
+    <p>If you need to further update the details for the new plot, use the Plot List tool 
+       <img style="width: 24px; height: 21px;" alt="" src="../images/28_parcel_list_icon.png">
+     to open the Plot List screen. From here you can select the plot and  
+      <img style="width: 50px; height: 20px;" alt="" src="../images/53_edit_icon.png">
+     its details as required using the Plot properties dialog. Once you have completed 
+     your updates in the Plot properties dialog,
+     <img style="width: 20px; height: 21px;" alt="" src="../images/save_icon.png">
+     Save and Close to redisplay the Plot List screen or 
+     <img style="width: 20px; height: 21px;" alt="" src="../images/cancel_icon.png">
+     Cancel if you choose not to save your changes.
+    </p>
+
+     <p>
+     If you decide to remove the new plot, select it in the Plot List screen and choose
+      <img style="width: 26px; height: 25px;" alt="" src="../images/62_reset_changes.png">
+     Remove You can also print an S-10 Survey Approval form by choosing 
+      <img style="width: 16px; height: 16px;" alt="" src="../images/50_print_icon.png">
+     Print S.10 Form on the Plot List screen.<br>
+     <br>
+       <img style="width: 670px; height: 478px;" alt="" src="../images/32_parcel_list.png"><br>
+    
+    </p>
+    <h2>Creating Plots with Irregular Boundaries</h2>
+    <p>The Create New Plot tool allows you to create new plots with simple right-line 
+        boundaries where the start and end point for each boundary line must be 
+        a survey point. If the plot requires an irregular boundary (a.k.a. natural 
+        boundary) then you need to use the Boundary Change tools to modify the 
+        right line boundary line of a new plot.  
+        <img style="width: 16px; height: 16px;" alt="" src="../images/27_new_parcel_icon.png">
+        prior to using the Boundary Change tools. The exception to this rule is where 
+        the irregular boundary will form the shoreline of a lake or the sea. 
+        In this case it is unlikely there will be an adjacent parcel to update. 
+        </p>
+        <p>The Select Boundary tool
+        <img style="width: 23px; height: 25px;" alt="" src="../images/56_select_boundary_icon.png">
+       can be used to identify the boundary line(s) of a new plot that must be 
+       changed into an irregular boundary. Use the tool to select the start and 
+       end points of the irregular boundary by dragging a small selection box 
+       around the appropriate new parcel node when prompted to do so by the tool. <br>
+        </p>
+       <p>
+      <img style="" alt="" src="../images/select_plot_node.png"><br>
+      <br>
+      The order that you select the start and end points for the new irregular 
+      boundary is important. The tool will highlight all plot boundary line(s) 
+      in a clockwise direction from the start point to the end point. The highlighted 
+      boundary lines indicate the boundary lines that will be replaced by the new 
+      irregular boundary. If the wrong sequence of boundary lines is highlighted, 
+      repeat the selection ensuring the end point is selected as the start point 
+      and vice versa. 
+      
+      </p>
+      
+      <p>Selecting a boundary to change will enable the Change Boundary tool 
+      <img style="width: 27px; height: 28px;" alt="" src="../images/57_modify_boundary_icon.png">
+      Use this tool to reshape the parcel boundary using the mouse. <br>
+      <br>
+      <img style="width: 790px; height: 510px;" alt="" src="../images/irregular_plot_boundary.png"><br>
+       If the new boundary covers a large area, it can be difficult using the 
+       Change Boundary tool
+       <img style="width: 27px; height: 28px;" alt="" src="../images/57_modify_boundary_icon.png">
+       to create the new boundary in one go. In this situation, create an initial 
+       boundary that approximately represents the new boundary you require. You 
+       can then zoom in and use the Boundary Change tools to improve segments of 
+       the initial boundary as required. 
+    </p>
+    
+    <h2>Approving a Plan</h2>
+    <p>Changes made to the cadastre remain pending until the application containing 
+        the Change to Cadastre service is approved. You can approve the application 
+        by completing all services on the application and approving the application 
+        using the Approve tool.
+        <br>
+      <img style="width: 16px; height: 16px;" alt="" src="../images/approve_application_icon.png">
+      in the Application action dropdown. The new plots will then show as current 
+      parcels in the SOLA Map Viewer. 
+ </p>
+ 
+ <p>     To print an S.10 Survey Approval Form for the new plot, use the Plot List tool
+      <img style="width: 24px; height: 21px;" alt="" src="../images/28_parcel_list_icon.png">
+      to open the Plot List screen and print the S.10 form from there. This can be 
+      done before the application is approved. <br>
+      <br>
+      <img style="width: 790px; height: 510px;" alt="" src="../images/approved_plan.png"><br>    
+    </p>
+    <h2>Creating Subplots</h2>
+    <p>You can create a subplot to define the area of a sublease in much the same 
+        way as creating a plot. The main difference is to select Subplot instead 
+        of Parcel as the Type on the Plot properties dialog.<br>
+        <br>
+         <img style="width: 600px; height: 400px;" alt="" src="../images/create_subplot.png"><br>
+         <br>
+         Subplots must be within the boundary of their parent plot. This may require 
+         selecting the parent plot as a Target Plot temporarily so that node linking 
+         can be performed.  This will help to avoid the subplot from extending beyond 
+         the boundary of the parent plot. 
+    </p>
+    <p>WARNING: Be sure to deselect the Target Plot before completing the 
+         Cadastre Change service otherwise the parent plot will be removed from 
+         the map when the application is approved.  
+    </p>
+    <p>A plot can have more than one subplot, as long as the subplots do not 
+         overlap. As with plots, the number for a subplot is automatically assigned 
+         when the Cadastre Change is saved. You can also create irregular boundaries 
+         for subplots in the same way as for plots.<br>
+
+        <br>
+        <img style="width: 790px; height: 510px;" alt="" src="../images/plot_with_two_subplots.png"><br>    
+
+        <br>
+        <br>Once the application is approved, the new subplots will display in the Subplots 
+        layer of the Map.<br> 
+        <br>
+        <img style="width: 790px; height: 510px;" alt="" src="../images/create_subplot.png"><br>    
+        
+        
+    </p>
   <p><b>Also See</b></p>
 <ul>
+  <li><a href="services.html" target="_top">Services</a></li>
   <li><a href="map_viewer.html" target="_top">SOLA Map Viewer</a></li>
-  <li><a href="perform_cadastre_change.html" target="_top">Perform Cadastre Change</a></li>
-  <li><a href="change_boundary.html" target="_top">Change Boundary</a></li>
-  <li><a href="../MainTopics/known_issues.html" target="_top">Known Issues</a>
-  </li>
+  <li><a href="application_details.html" target="_top">Application Details</a></li>
 </ul>
 <br>
   <br>

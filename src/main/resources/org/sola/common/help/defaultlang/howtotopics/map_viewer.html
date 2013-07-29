@@ -12,11 +12,14 @@
         <p>The SOLA Map Viewer allows you to navigate and interact with the
             geospatial data managed by SOLA. It can be accessed from the Map &gt;
             Ctrl + Open Map menu or selecting <img style="width: 16px; height: 16px;" alt="" src="../images/05_world_icon.png"></p><br>
-        <p><img style="width: 600px; height: 400px;" alt="" src="../images/10_map_viewer.png"></p>
+        <p><img style="width: 1129px; height: 728px;" alt="" src="../images/10_map_viewer.png"></p>
 
-        <p>The SOLA Map Viewer includes a toolbar for navigating and querying the map and two tabs: 
-            one Table of Contents that can be used to control the layers displayed on the map 
-            and one Find tab that can be used to find parcels in the map
+        <p>The SOLA Map Viewer includes a toolbar for navigating and querying the 
+            map as well as two tabs; Layers and Find. The Layers tab can be used 
+            to control the geospatial data displayed on the map while the Find 
+            tab that can be used to quickly locate plots and other geospatial 
+            features in the map.
+            
             The tools provided for the SOLA Map Viewer are:</p>
 
         <ul>
@@ -28,6 +31,7 @@
             <li>Information Tool <img style="width: 16px; height: 16px;" alt="" src="../images/15_information_tool_icon.png"><br>
             </li>
             <li>Print <img style="width: 16px; height: 16px;" alt="" src="../images/50_print_icon.jpg"></li>
+            <li>Export to KML <img style="width: 16px; height: 16px;" alt="" src="../images/65_export_kml_icon.jpg"></li>
 
         </ul>
 
@@ -37,46 +41,58 @@
 
         <h2>Map Scale and Location</h2>
 
-        <p>The scale of the map can be controlled using the Zoom in, Zoom out and Zoom to extent tools. The desired scale can also be 
-            entered directly into the Scale text box in the bottom right of the map.A scale bar is displayed to help determine distances
-            on the map. Note that due to variations in screen resolution, the scale bar is indicative only and it should not be used to 
-            obtain accurate measurements from the map. 
-            As you pass the mouse over the map you will see map coordinates displayed in the bottom left corner under the Layers and Find tabs. 
-            This information can be used to determine coordinate locations on the map.
-        </p>
+        <p>The scale of the map can be controlled using the Zoom in, Zoom out 
+            and Zoom to extent tools. The desired scale can also be entered 
+            directly into the Scale text box in the bottom right of the map. </p>
+
+        <p>A scale bar is displayed to help determine distances on the map. Note that 
+            due to variations in screen resolution, the scale bar is indicative 
+            only and it should not be used to obtain accurate measurements from the map.</p>
+        
+        <p>As you pass the mouse over the map you will see map coordinates 
+            displayed in the bottom left corner under the Layers and Find tabs. 
+            This information can be used to determine coordinate locations on the map.</p>
+
 
         <h2>Layers</h2>
 
         <p>The Layers tab identifies the layers of geospatial data that can be displayed in the map. You can show or hide these layers by 
             checking or clearing the checkbox next to the layer name
             <br>
-            <img style="width: 519px; height: 329px;" alt="" src="../images/layers.jpg">
+            <img style="width: 248px; height: 392px;" alt="" src="../images/layers.jpg">
             <br>
-            By clicking the triangle beside each layer name you can also see the symbology used to illustrate the geospatial data at different map scales.
-            For example, when the map scale is below 2,500, Place names will be illustrated with a large red square. Between 2,500 and 90,000 a medium red
-            square is used and above 90,000 a small red square. Using the map scale to control the layer symbology ensures the map does not become overly 
-            crowded with detail which might otherwise impair navigation or comprehension of the information displayed by the map.  
+            By clicking the triangle beside each layer name you can also see the 
+            symbology used to illustrate the geospatial data at different map scales. 
+            Using the map scale to control the layer symbology ensures the map 
+            does not become overly crowded with detail which might otherwise 
+            impair navigation or comprehension of the information displayed by the map.    
             <br>
-            The default layers available for SOLA include
+            The default layers available for SOLA Lesotho include
         <ul>
 
-            <li>Applications	Points that indicate the approximate location of applications that have been lodged in SOLA. 
-                Application points can be created using the Map Points tab when capturing details for a new application. </li>
-            <li>Place names	Illustrates the approximate location of notable geographic features such as towns, headlands and bays. </li>
-            <li>Survey controls	Illustrates the location of survey control (i.e. geodetic) marks. </li>
-            <li>Roads	Shows the location of roads.</li> 
-            <li>Pending Parcels	New parcels that have been created by a survey subdivision or amalgamation. These parcels remain pending 
+            <li>Plot Nodes	Illustrates the location of current plot nodes. Nodes
+            only display when the map scale is less than 1:3,000</li> 
+           <li>Roads	Shows the location of roads. Major  roads will display when
+           the map scale is less than 1:90,000 with minor roads only displaying at scales
+           less than 1:10,000</li> 
+            <li>Pending Plots	New plots that have been created by a survey 
+                subdivision or amalgamation. These parcels remain pending 
                 until the application that created them is approved. </li>
-            <li>Parcels	Illustrates the location of current parcels.</li>
-            <li>Historic Parcels with Current Titles	This layer shows parcels that have been subdivided or amalgamated into new parcels, but still have current title references. </li>
-            <li>Parcel Nodes	Illustrates the location of current parcel nodes.</li> 
+            <li>Historic Plots with Registered Leases	This layer shows plots 
+                that have been subdivided or amalgamated into new plots, but 
+                still have registered leases. </li>
+            <li>Subplots    Illustrates the location of subplots used to define 
+                the areas of a sublease</li>
+            <li>Plots   Illustrates the location of current plots</li>
+            <li>Coordinate Systems  Illustrates the approximate boundary of the 
+                Lo27 and Lo29 coordinate systems</li>
             <li>Orthophoto	Aerial photograph(s) that have been corrected for lens distortion, 
-                camera tilt and topography to ensure they have a uniform scale and are suitable for map display.</li>
+                camera tilt and topography to ensure they have a uniform scale 
+                and are suitable for map display.</li>
 
         </ul> 
-        Note that the layers can be reconfigured to match those required by the land administration agency
-        <br>
-        <img style="width: 519px; height: 329px;" alt="" src="../images/orthophoto.jpg">
+         <br>
+        <img style="width: 1132px; height: 722px;" alt="" src="../images/orthophoto.jpg">
 
     </p>
 
@@ -86,22 +102,24 @@
         You can use the Find tab to perform spatial searches to quickly locate parcels or other geospatial features in the map. 
         To use the Find, select the type of geospatial feature to search in the Search By drop down and start typing in the field provided.
         Once you have entered enough characters (between 1 and 3), the search will begin listing values that match the search criteria. 
-        To view one of the results, double click the result value in the result list and the map will zoom to the location of the selected feature and highlight it.
+        To view one of the results, double click the result value in the result 
+        list and the map will zoom to the location of the selected feature and highlight it.
         <br>
-        <img style="width: 519px; height: 329px;" alt="" src="../images/find.jpg">
+        <img style="width: 1132px; height: 779px;" alt="" src="../images/find.jpg">
+        <br>
+        
+        The spatial searches available in SOLA Lesotho are:
 
     <ul>
 
-        <li>Number	Enter the appellation for a parcel (e.g. parcel/lot and/or plan number) to locate a parcel. This search will only work with parcels 
-            that have a spatial definition. Requires at least 3 characters to be entered.</li> 
-        <li>Property number	Enter the title / folio reference for a property to locate the parcel for the property. 
-            This search will only work if the property is linked to a parcel with a spatial definition. Requires at least 3 characters to be entered.</li>
-        <li>Property owner	Enter the name of a current property owner to locate a parcel for the property. This search will only work if the property is 
-            linked to a parcel with a spatial definition. Requires at least 3 characters to be entered.</li>
+        <li>Grid Number	Enter the grid number to locate a grid on the map. 
+            Requires at lease 2 characters to be entered</li> 
+        <li>Lessee name Enter the name of a current lessee to locate a plot. 
+            This search will only work if the property is linked to a plot or subplot.
+            This search will only work with plots that have a spatial definition. 
+            Requires at least 3 characters to be entered.</li>
 
     </ul>
-    Note that the spatial searches can be reconfigured to match those required by the land administration agency.
-</p> 
 
 <h2>Information Tool</h2>
 
@@ -110,35 +128,65 @@
     in close proximity or overlap, the Information Tool displays details
     for all features immediately surrounding the selected location.
     Click the appropriate tab to see details for the various layer features.
-    Note that the tabs and the details displayed by the Information Tool can be reconfigured to match those required by the land administration agency
 </p><br>
 
 <img style="width: 519px; height: 329px;" alt="" src="../images/16_information_tool.png">
 
 <h2>Print out Tool</h2>
-
-<p>The Print Out Tool can be used to print out the visualised map in a pdf file format.
-    You can turn layers on/off if you want or don't want some of them to be in printout.
-    Then you can choose a layout: A3, A4, A5 but there can be defined as many as needed.
-    In the same dialog you can choose a scale. An estimated scale is already calculated from the map.<br>
-    Click the Print button to generate a document containing the image of the map. Using the Report Viewer, 
-    you can save the print in several formats including PDF, DOCX and HTML or print a hard copy For PDF format a PDF Viewer must be installed in the system.
-    <br>
-    Notice that everywhere in the software there is a map there is a Print button as well and that when printing – additionally - a service of type cadastrePrint 
-    is registered in the service table and also marked as completed (if the map window is started by an application, this service is attached to the application, 
-    completed Map Print service ) 
-    Note that the print templates (i.e. A3, A4 and A5) can be can be reconfigured to match those required by the land administration agency.
+<p> The   <img style="width: 16px; height: 16px;" alt="" src="../images/50_print_icon.png">
+    Print Tool can be used to export the current view of the map to a PDF file 
+    for printing. Before printing, you should setup the map with the layers you 
+    want to include in the print by turning them on or off. Once you have 
+    arranged the map with the information you want on the print, click the 
+    <img style="width: 16px; height: 16px;" alt="" src="../images/50_print_icon.png">
+    Print Tool. This will display the Print dialog where you can select the 
+    layout (A3, A4, A5) and change the map scale. 
 </p><br>
 
-<img style="width: 519px; height: 329px;" alt="" src="../images/map_print.jpg">
+<img style="width: 258px; height: 178px;" alt="" src="../images/printDialog.png">
+<p> Click the Print button to generate a document containing the image of the map. 
+    Using the Report Viewer, you can save the print in several formats including 
+    PDF, DOCX and HTML or print a hard copy. 
+</p><br>
+<img style="width: 830px; height: 1006px;" alt="" src="../images/map_print.jpg">
 
+<h2>Export to KML Tool</h2>
+<p> The   <img style="width: 16px; height: 16px;" alt="" src="../images/65_export_kml_icon.png">
+    Export to KML Tool can be used to export the currently selected feature of 
+    the map into a basic format KML file. That KML file can then be loaded into 
+    Google Earth and displayed. 
 
+    Before exporting, you should use the Map Find to locate and select a feature 
+    and then click the  
+    <img style="width: 16px; height: 16px;" alt="" src="../images/65_export_kml_icon.png">
+    Export to KML Tool. This will export map data from the selection layer using 
+    longitude and latitude coordinates into a file called mapExport.kml in your
+    user_home/sola/ directory. If you have Google Earth installed, double click 
+     the file to launch Google Earth and show the feature super-imposed on Google 
+     Earth map. Note that you can also use Google Earth to change the styling for 
+     the feature.  
+</p><br>
+<img style="width: 942px; height: 678px;" alt="" src="../images/kml_in_google_earth.png">
+<h2>Changing the Coordinate System used by the Map</h2>
+<p>
+    Two coordinate systems are used in Lesotho, Cape / Lo27 covering the area from 
+    26° E to 28° E and Cape / Lo29 covering the area from 28° E to 30° E. The 
+    SOLA Map can be re-projected using either the Lo27 or Lo29 coordinate system 
+    by selecting the applicable coordinate system in the combo box in the bottom 
+    left of the map. 
+    <br>
+    
+    The Coordinate Systems layer provides a visual reference showing the coordinate 
+    system best suited for the area displayed on the map. Note that SOLA will not 
+    automatically change the display coordinate system of the map. You must 
+    change it manually. 
+
+</p>
 <p><b>Also see</b></p>
 <ul>
-    <li><a href="edit_an_application.html" target="_top">Edit an application</a><br>
-    </li>
-    <li><a href="add_location.html" target="_top">Add a location for an application</a></li>
-    <li><a href="../MainTopics/known_issues.html" target="_top">Known Issues</a><br>
+    <li><a href="cadastre_change.html" target="_top">Change to Cadastre</a><br>  </li>
+    <li><a href="redefine_cadastre.html" target="_top">Redefine Cadastre</a></li>
+    <li><a href="print_location_map.html" target="_top">Print Location Map Service</a><br>
     </li>
 </ul>
 

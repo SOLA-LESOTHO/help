@@ -34,31 +34,127 @@
   <title>Add Document</title>
 
   
-</head><body style="margin-left: 24px; width: 1040px;">
+</head>
+<body style="margin-left: 24px; width: 1040px;">
 <h1>Add Document</h1>
 
-<p>Several functionalities (such as Applications and Services) need documents to be added.<br>
-<ul>
-   <li> To add a document to an Application, use the Documents tab in the Application Details screen. Fill in the details of the document, then click the “...”button in the Attachment text field to attach a digital document.</li> 
-   <li> To add documents to a service go to the Property Details screen and then click “Link Paper Title” (for almost all the services) or “Add” (for Cadastre Change, Redefine Cadastre...)  in the document section.<br>
-    This will open a tabbed screen for selecting the needed document from the Application’s documents list or for adding a new document
+<p>Documents are records created in SOLA that capture summary details about legal, 
+    official or other documentation supplied by the agent or applicant to support 
+    their request for changes to the land registry and/or cadastre information.<br>
     <br>
-    <img style="width: 600px; height: 362px;" alt="" src="../images/add_document.png"><br>
-     For adding a new document fill in the details of the document, 
-        click the “...”button in the Attachment text field to attach a digital document 
-        and then click “Add” button. The document is added to the list of  property's paper titles in the Property Details screen
-    </li> 
+    <img style="width: 790px; height: 510px;" alt="" src="../images/application_details_document.png"><br>
+</p>
+
+<p>To add a document to an application, use the 
+    <img style="width: 49px; height: 23px;" alt="" src="../images/52_add_icon.png"> 
+    tool on the Documents tab. This will open the Add Document dialog. <br>
+    <br>
+    <img style="width: 719px; height: 524px;" alt="" src="../images/add_document.png"><br>
+</p>
+
+<p>Enter the necessary details for the document as required and click 
+    <img style="width: 49px; height: 23px;" alt="" src="../images/52_add_icon.png"> 
+    to add the new document to the application. Note that when you click    
+    <img style="width: 49px; height: 23px;" alt="" src="../images/52_add_icon.png"> 
+    , the form will be cleared and remain open so that it is ready to capture details 
+    for the next document. </p>
+
+<p>The details that can be captured for the document are:
+    <ul>    <li>Type &#8211; Mandatory. The type of document to search. The document 
+            types available for SOLA are discussed in the Document types section of this guide.</li> 
+             <li>Date &#8211; Mandatory. The date printed or written 
+                 on the face of the document. This date can be searched if it was 
+                 recorded when capturing the document details. If the document 
+                 was not dated, then enter today’s date.</li> 
+            <li>Reference (Deed Number) &#8211;Recommended. If the document is a 
+                legal or a government document, it may already have an identifying 
+                reference number or deed number printed or written on the face of it. 
+                This reference number should be entered here. If there is no identifying 
+                number on the document, this field can remain blank</li>
+            <li>Office Number &#8211;Recommended. The office number field is not editable. 
+                SOLA will automatically assign an office number when the document record is created. </li>
+           <li>Source Agency &#8211;Optional. The source of the document, e.g. the 
+               name of the firm or bank that created the document. This search 
+               field supports partial and full matching. </li>
+           <li>Attachment &#8211;Recommended. The name of the file that contains 
+               the image of the document. Use the ellipses button “...” to open 
+               the File Attachment dialog and attach a file.  </li>
+           <li>Submission Date &#8211; Optional. The date the document was first 
+               recorded in SOLA. This field is not editable and is automatically 
+               populated by SOLA. It can be used a search field in the Document Search. </li>
+           <li>Acceptance Date &#8211; Optional. The date the document was accepted by 
+               the agency or organization that registered the document. Not applicable for all documents. </li>
+           <li>Expiration Date &#8211; Optional. The date the document will expire. Not applicable for all documents.</li>
+           <li>Status &#8211; The status of the document. Automatically populated 
+               by SOLA for registered documents like Power of Attorney and Notarial Bonds. </li>
+           <li>Signing Date &#8211; Optional. The date the document was signed 
+               by all parties. Not applicable for all documents.</li>
+           <li>Version &#8211; Optional. The version of the document. Not applicable for all documents.</li>
+           <li>Description &#8211; A description given to the document to provide a 
+               summary of its content. The details of this field can be searched from Document Search. </li>
 </ul>
-</p>  
+</p>
+
+<p>         The Add Document dialog also includes Document Search and Power of 
+            Attorney Search tabs that allow you to search existing SOLA documents 
+            for a file that was previously attached. This can be a useful way to 
+            link registered Power of Attorney documents as well as reference other 
+            documentation that may be relevant to the application. Once you have 
+            located the existing document you wish to link, use
+            <img style="width: 19px; height: 23px;" alt="" src="../images/complete_icon.png"> 
+            Select it to add into the application
+</p>
+
+<h3>Steps</h3>
+
+<ol>
+    <li>From the Dashboard select the
+     <img style="width: 49px; height: 23px;" alt="" src="../images/52_add_icon.png"> 
+     tool to open the Add Document dialog    </li>
+    <li>Enter the document type and date</li>
+    <li>If an attachment is available or the file to attach has previously 
+        been uploaded into SOLA, click the “...” button in the Attachment field and locate the file.</li>
+    <li>Complete any remaining details describing the document as necessary</li>
+    <li>Once all of the document details are correct and the appropriate file is 
+        attached, click the 
+     <img style="width: 49px; height: 23px;" alt="" src="../images/52_add_icon.png"> 
+    button to add the document to the application. A paperclip icon is displayed 
+    in the documents list to indicate the documents that have attachments    </li>
+    <li>     <img style="width: 20px; height: 20px;" alt="" src="../images/save_icon.png"> 
+    Save the application to ensure the new document is created as well as any file attachment </li>
+</ol>
+
+<h3>Notes</h3>
+
+<ul>
+    <li>The Required Document Types list box shows the document types that 
+        must be included with the application. Be sure to add all required documents 
+        otherwise it will not be possible to approve the application. </li>
+    <li>If you attach the wrong file as an attachment, use the remove icon
+            <img style="width: 15px; height: 15px;" alt="" src="../images/remove_icon.png"> 
+            in the Attachment field to remove the file (if prior to Add) or the 
+            <img style="width: 25px; height: 25px;" alt="" src="../images/62_reset_changes_icon.png"> 
+            Reset Changes button to remove the document record from the Documents list and re-add it.
+    </li>
+    <li>If you need to change or update the document details, select the document 
+        in the Documents list and use the 
+     <img style="width: 50px; height: 20px;" alt="" src="../images/53_edit_icon.png"> 
+     tool. This will open the Add Document dialog in edit mode. </li>
+    <li>Power of Attorney and Standard Documents must be registered in 
+        SOLA before they can be located using the Document searches. </li>
+    <li>It is not possible to update the file attachment for Power of Attorney 
+        and Standard Documents. Ensure you link these documents with the appropriate 
+        attachments when the documents are added to the application.   </li>
+</ul>
+
+
   <p><b>Also See</b></p>
 <ul>
-  <li><a href="transactionedDocument.html" target="_top">Document Registration</a></li>
-  <li><a href="attach_digital_document.html" target="_top">Attach Digital Document</a></li>
-  <li><a href="../MainTopics/known_issues.html" target="_top">Known Issues</a>
+  <li><a href="documents.html" target="_top">Documents</a></li>
+  <li><a href="application_details.html" target="_top">Application Details</a></li>
+  <li><a href="document_search.html" target="_top">Document Search</a>
   </li>
 </ul>
 <br>
-  <br>
-  <br>
-  <br>
-</body></html>
+</body>
+</html>

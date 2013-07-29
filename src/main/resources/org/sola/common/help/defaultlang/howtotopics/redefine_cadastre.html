@@ -37,60 +37,143 @@
 </head><body style="margin-left: 24px; width: 1040px;">
 <h1>Redefine Cadastre</h1>
 
-<p>The Redefine Cadastre screen allows you to change the boundaries of an existing cadastre object both entirely and point by point (adding nodes and changing nodes coordinates). 
-    It can be accessed by starting a Redefine Cadastre service from the Application Details Service tab 
-</p><br>
+<p>The Redefine Cadastre screen allows you to change the boundaries of an existing 
+    plot both entirely and point by point (adding nodes and changing node coordinates) 
+    outside of the receipt of a survey plan. This may be required due to general 
+    maintenance of the cadastral network and/or correction of erroneous data. </p><br>
 
-<img style="width: 600px; height: 362px;" alt="" src="../images/redefine_cadastre.png"><br>
+<h2>Lodge an Application</h2>
 
-<p>Also this screen extends the SOLA Map Viewer with additional tools to aid spatial editing of parcels.  
-    The additional tools provided are:</p>
+<p>To redefine the cadastre, you must lodge a new application in SOLA containing 
+    a Redefine Cadastre service. </p>
+
+<h3>Steps</h3>
+<ol>
+    <li>Discuss and confirm the changes required with your team leader. </li>
+    <li>From the Dashboard, select the   
+        <img style="width: 16px; height: 16px;" alt="" src="../images/03_new_application_icon.png">
+        New application tool to open the Application Details screen.  </li>
+    <li>On the General tab, enter the contact details for the person 
+        making the request and select the agent from the Agent drop down if appropriate.  </li>
+    <li>On the Services tab, add the Change to Cadastre service to the application.</li>
+    <li>You can optionally list the plots affected by the application on the Plot tab. </li>
+    <li>On the Documents tab, create a Complete Survey Report document and 
+        attach the documentation that describes the change and clarifies why the 
+        change is being made.  Enter today’s date for the document. The other 
+        fields can remain blank.    </li>
+    <li>On the Services tab, check the Fee Paid checkbox then click the
+        <img style="width: 20px; height: 21px;" alt="" src="../images/save_icon.png">
+        Save button. This will lodge the application and produce the lodgement notice. 
+        You can close the lodgement notice without printing it. If you do not have 
+        permission to check the Fee Paid checkbox, save the application and arrange 
+        for a person with the appropriate privilege to do this for you.  </li>
+</ol>
+
+<h2>Assign the Application</h2>
+
+<p>Before work can begin on changing the map, the application must first get assigned 
+    to a Survey staff member. Assignment of the application indicates that work on 
+    the application is underway.</p>
+
+<h3>Steps</h3>
+
+<ol>
+    <li>Assuming the Fee Paid checkbox is checked, select the application in the 
+        Unassigned applications list and click the 
+       <img style="width: 68px; height: 20px;" alt="" src="../images/06_assign_icon.png">
+       Assign tool. This will open the Application Assignment dialog.   </li>
+    <li>Click the Assign button to assign the application. When the Assign 
+        action is complete, you will be returned to the Dashboard and the assigned 
+        application will appear in your Assigned applications list.   </li>
+</ol>
+
+<h2>Redefine Cadastre Service</h2>
+
+<p>The Redefine Cadastre service provides tools that allow you to modify the existing 
+    cadastral network. The following describes the basic process flow for changing 
+    the map. Variations to this basic flow are possible.</p>
+
+<h3>Steps</h3>
+
+<ol>
+    <li>From the Dashboard,
+        <img style="width: 55px; height: 21px;" alt="" src="../images/51_open.png">
+        Open the application from your Assigned applications list. </li>
+    <li>On the Services tab, select the Change to Cadastre service and click the
+        <img style="width: 21px; height: 22px;" alt="" src="../images/start_again_icon.png">
+        Start tool. This will open the Change to Cadastre screen.  </li>
+    <li>If the Map Viewer is not already zoomed to the location of the survey, 
+        use the map search or the map navigation tools to locate the area 
+        of the survey.  </li>
+    <li>Use Node tools and/or Boundary Change tools to update plots as required.</li>
+    <li>Once all of the relevant information from the plan has been captured into 
+        SOLA, return to the Services tab of the Application Details screen, select 
+        the Redefine Cadastre service and click the 
+        <img style="width: 19px; height: 23px;" alt="" src="../images/complete_icon.png">
+        Complete tool. This will run the SOLA business rules to validate the application 
+        data. If there is a critical failure, you must remedy the failure as it 
+        will not be possible to approve the application otherwise.  </li>    
+</ol>
+
+<h3>Notes</h3>
+
 
 <ul>
-
-  <li>Add node <img style="width: 16px; height: 16px;" alt="" src="../images/60_add_node.png"></li>
-  <li>Select node to modify<img style="width: 16px; height: 16px;" alt="" src="../images/61_select_node.png"></li>
-  <li>Reset changes <img style="width: 16px; height: 16px;" alt="" src="../images/62_reset_changes.png"></li>
-  <li>Select a boundary to change <img style="width: 16px; height: 16px;" alt="" src="../images/56_select_boundary_icon.png"></li>
-  <li>Change selected boundary <img style="width: 16px; height: 16px;" alt="" src="../images/57_modify_boundary_icon.png"></li>
-  <li>Add  image <img style="width: 16px; height: 16px;" alt="" src="../images/58_add_image_icon.png"></li>
-  <li>Remove added image <img style="width: 16px; height: 16px;" alt="" src="../images/59_remove_image_icon.png"><br>
-  </li>
+    <li>Use <img style="width: 20px; height: 21px;" alt="" src="../images/save_icon.png">
+        Save on the Redefine Cadastre screen regularly. </li>
+    <li>The act of saving and/or completing the service will cause the 
+        SOLA business rules to run validating the state of the data. 
+        If you receive rule failures, check 
+        <a href="business_rules.html" target="_top">Business Rules</a>
+        to determine how those failures can be remedied.   </li>
+    <li>Additional information on using the Change to 
+        Cadastre tools can be found in the Change to Cadastre section. </li>
 </ul>
 
-<h2>Nodes</h2>
+<h2>Approval</h2>
 
-<p>Nodes represent crucial elements in the boundary. New nodes can be added using the Add 
-    new node tool and existing ones can be selected using the Select a Node to Change tool
-</p> <br>
+<p>The changes you make to the cadastral network while using the Redefine Cadastre 
+    tools remain pending until the application is approved. Survey approval in 
+    SOLA can be achieved using the  
+    <img style="width: 16px; height: 16px;" alt="" src="../images/approve_application_icon.png">
+    Approve action in the Application action dropdown.   </p>
 
-<img style="width: 600px; height: 362px;" alt="" src="../images/redefine.png"><br>
+<h3>Steps</h3>
 
-<p>The coordinates of new or existing node can be then manually changed entering them directly into the opened dialog box and clicking modify.
-To remove the node click Remove
-</p> <br>
+<ol>
+    <li>Open the application from your Assigned applications list and use the 
+        <img style="width: 16px; height: 16px;" alt="" src="../images/validate_icon.png">
+        Validate tool to check the status of the application data. If 
+        there are any rule failures, review the application data and correct 
+        the issues as appropriate before proceeding to approve the application.  </li>  
+    <li>Use the <img style="width: 16px; height: 16px;" alt="" src="../images/approve_application_icon.png">
+        Approve action in the Application action dropdown to approve the application.
+        This will update the status of the application to Approved as well 
+        as update the cadastral network with the information captured from the survey.       </li>
+    <li>Following approval, you can complete the application immediately using the 
+        <img style="width: 16px; height: 16px;" alt="" src="../images/archive_icon.png">
+        Archive action in the Application action dropdown.   </li>
+</ol>
 
-<img style="width: 600px; height: 362px;" alt="" src="../images/coordinates.png"><br>
-
-<p>The new boundary will appear in light green while the old one will be in dark green thus pointing out the differences between the two.
-</p> <br>
-
-<img style="width: 600px; height: 362px;" alt="" src="../images/redefined_node.png"><br>
-    
-    
-<p>Once modified the coordinates or removed the node, the cadastre definition process can be reset using the Reset tool .
-When the redefinition is complete, Save the cadastre redefinition.
-To complete the cadastre redefinition, complete the Redefine Cadastre service using the Complete tool on the Application Details Services tab and then approve the application. This will cause the new boundary to become current and the old to become historic.
-</p><br>
-  
-  <p><b>Also See</b></p>
+</p><br>  
+        
+<p><b>Also See</b></p>
 <ul>
-  <li><a href="map_viewer.html" target="_top">SOLA Map Viewer</a></li>
-  <li><a href="perform_redefine_cadastre.html" target="_top">Perform a Redefinition of Cadastre</a></li>
-  <li><a href="change_boundary.html" target="_top">Change Boundary</a></li>
-  <li><a href="../MainTopics/known_issues.html" target="_top">Known Issues</a>
-  </li>
+    <li><a href="application_lifecycle.html" target="_top">SOLA Application Lifecycle</a></li>
+    <li><a href="services.html" target="_top">Services</a></li>
+    <li><a href="business_rules.html" target="_top">Business Rules</a></li>
+    <li><a href="dashboard_and_main_menu.html" target="_top">Dashboard and Main Menu</a></li>
+    <li><a href="map_viewer.html" target="_top">SOLA Map Viewer</a></li>
+    <li><a href="application_search.html" target="_top">Application Search</a></li>
+    <li><a href="application_details.html" target="_top">Application Details</a></li>
+    <li><a href="cadastre_change.html" target="_top">Cadastre Change</a></li>
+    <li><a href="assign_an_application.html" target="_top">Assign an Application</a></li>
+    <li><a href="calculate_fees.html" target="_top">Calculate Fees</a></li>
+    <li><a href="verify_property_details.html" target="_top">Verify Property Details</a></li>
+    <li><a href="add_document.html" target="_top">Add Document to an Application</a></li>
+    <li><a href="add_file_attachment_new_document.html" target="_top">Attach a File to a new Document</a></li>
+    <li><a href="application_for_registration_services.html" target="_top">Lodge and Process a Land Registration Application</a></li>
 </ul>
 <br>
-  <br>
+<br>
 </body></html>
