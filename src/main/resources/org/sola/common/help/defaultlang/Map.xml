@@ -93,7 +93,7 @@
     <mapID target="mortgage_sublease" url="howtotopics/mortgage_sublease.html" />
     <mapID target="register_servitude" url="howtotopics/register_servitude.html" />
     <mapID target="record_dispute" url="howtotopics/record_dispute.html" />
-    <mapID target="power_of_attorney" url="howtotopics/power_of_attorney.html" />
+    <mapID target="register_power_of_attorney" url="howtotopics/register_power_of_attorney.html" />
     <mapID target="cancel_power_of_attorney" url="howtotopics/cancel_power_of_attorney.html" />
     <mapID target="notarial_bond" url="howtotopics/notarial_bond.html" />
     <mapID target="cancel_notarial_bond" url="howtotopics/cancel_notarial_bond.html" />

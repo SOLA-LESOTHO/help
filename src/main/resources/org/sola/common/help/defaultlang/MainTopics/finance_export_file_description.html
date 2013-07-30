@@ -5,11 +5,930 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <p> TO ADD APPENDIX 3 DESCRIPTIONS</p>
+        <h1>Finance Export File Description</h1>
+        
+        <p>In order to automate the data exchange from the SOLA system to an external 
+            financial system, this export function can be used to export details 
+            from SOLA that describe information about rights, such as state leases, 
+            that have an associated obligation to make regular payments. The management 
+            of these financial obligations will be undertaken in the financial system 
+            with SOLA providing details on new rights (that lead to financial obligations) 
+            as well as when changes occur to existing rights with financial obligations. </p>
+        
+        <p>The details exported describe:</p>
+        
+        <ol>
+            <li>The person or organization responsible for making these payments (payer);</li>
+            <li>The amount of those regular payments (e.g. ground rent); </li>
+            <li>The right holders names; and</li>
+            <li>Plot (parcel) area and descriptor.</li>
+            
+            <p>The export produces a CSV file. The first row in a CSV file contains field 
+                headers. The table describes every field in the sequence they appear in 
+                the export file.</p>
+            
+            <p>Options available to the SOLA user (with the appropriate SOLA role) 
+                initiating an export to specify the right (lease is the only option 
+                for LAA implementation of SOLA) and this search can be further qualified 
+                by specifying a date range for the date the right was registered. A list 
+                of right records meeting these criteria is displayed in a results listing. </p>
+            
+            <p>The SOLA user then has the option to export all records returned 
+                from the search or to select individual records. At this point, 
+                the SOLA user is prompted to identify which folder the export file 
+                will be saved in and the file name of the export file. </p>
+            
+            <p>In the loading of the SOLA export file into the financial system, 
+                care must be taken to ensure that where a right (a lease) has been 
+                transferred from one person to another that  the  record with a  
+                “current” value for the RightStatus field reflects the record  
+                containing new right holders and the new payer. Secondly, it is 
+                important that the  RightTrackingNumber field together with TitleId 
+                field are used to locate the right (lease) record  in the finance 
+                system when making changes to an existing right (lease) record. 
+                The RightID field should NOT be used for this purpose.</p>
+            
+            <h2>SOLA Ground Rent & Payer Export File Fields</h2>
+            
+            <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.75pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:3.6pt 5.75pt 3.6pt 5.75pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:25.15pt'>
+   <td width=74 style='width:55.65pt;border:solid windowtext 1.0pt;mso-border-alt:
+   solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;height:25.15pt'>
+   <p class=Tabletext style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+   3.0pt;margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span
+   style='font-size:11.0pt'>Sequence<o:p></o:p></span></b></p>
+   </td>
+   <td width=192 style='width:143.85pt;border:solid windowtext 1.0pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+   solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;height:25.15pt'>
+   <p class=Tabletext style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+   3.0pt;margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span
+   style='font-size:11.0pt'>Field name<o:p></o:p></span></b></p>
+   </td>
+   <td width=366 style='width:274.25pt;border:solid windowtext 1.0pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+   solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;height:25.15pt'>
+   <p class=Tabletext style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+   3.0pt;margin-left:0cm'><b style='mso-bidi-font-weight:normal'><span
+   style='font-size:11.0pt'>Description<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:1;height:15.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>1<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorID</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>SOLA internal unique identifier of right
+  holder, designated to receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:14.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:14.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>2<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:14.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorName</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:14.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>First name of right holder, designated to
+  receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:17.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:17.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>3<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:17.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorLastName</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:17.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>Last name of right holder, designated to
+  receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>4<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorFullName</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>Full name (combined of first and last
+  names) of right holder, designated to receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:14.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:14.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>5<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:14.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorGender</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:14.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>Gender code of right holder, designated
+  to receive ground rent bills. Possible values:<o:p></o:p></span></p>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal style='mso-list:l4 level1 lfo1'><span lang=EN-AU>female<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l4 level1 lfo1'><span lang=EN-AU>male<o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>6<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorBirthday</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Date of birth of right holder, designated
+  to receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:14.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:14.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>7<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:14.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorAddress</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:14.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>Postal address of right holder,
+  designated to receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:15.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:15.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>8<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorPhone</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Phone number of right holder, designated
+  to receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:11.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>9<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorMobile</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>Mobile phone number of right holder,
+  designated to receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:15.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>10<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorEmail</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>Email of right holder designated to
+  receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>11<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorIdTypeName</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Right holder’s ID type, designated to
+  receive ground rent bills. Possible values:<o:p></o:p></span></p>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal style='mso-list:l0 level1 lfo3'><span class=SpellE><span
+       lang=EN-AU>nationalID</span></span><span lang=EN-AU><o:p></o:p></span></li>
+  </ul>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal style='mso-list:l2 level1 lfo2'><span class=SpellE><span
+       lang=EN-AU>nationalPassport</span></span><span lang=EN-AU><o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l2 level1 lfo2'><span class=SpellE><span
+       lang=EN-AU>otherPassport</span></span><span lang=EN-AU><o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:12.6pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.6pt'>
+  <p class=MsoNormal><span lang=EN-AU>12<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.6pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>PayorIdNumber</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.6pt'>
+  <p class=MsoNormal><span lang=EN-AU>ID number of right holder designated to
+  receive ground rent bills.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:12.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>13<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>TitleId</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>SOLA internal unique identifier, related
+  to the title (<span class=SpellE>ba_unit</span>) under which rights are
+  registered.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;height:15.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>14<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>ParcelNumber</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>Cadastre number of parcel, related to the
+  exported right.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;height:11.1pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:11.1pt'>
+  <p class=MsoNormal><span lang=EN-AU>15<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.1pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>ParcelArea</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.1pt'>
+  <p class=MsoNormal><span lang=EN-AU>Area of parcel in square <span
+  class=SpellE>meteres</span>.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;height:11.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>16<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>ParcelAreaFormatted</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>Formatted area of parcel wrapped in the
+  text “with an area of XXX m2”.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;height:11.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>17<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightID</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>SOLA internal unique identifier of
+  exported right.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;height:11.25pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>18<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightTrackingNumber</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:11.25pt'>
+  <p class=MsoNormal><span lang=EN-AU>Right tracking number links changes in
+  the right history. This number is very important and plays a role of unique
+  right identifier for a given title. With every change to the right like
+  transfer or termination, a new copy of the current right will be created
+  containing its own unique ID. With the tracking number you can trace and
+  pickup previous states of the right. For example if a right gets terminated
+  you will get a new record with unique ID and terminated state but with the
+  same tracking number, so you can refer back to the original record with
+  active state and cancel/terminate it in your system. This number must be used
+  together with <span class=SpellE><b style='mso-bidi-font-weight:normal'>TitleId</b></span>
+  value to find a right for a given title.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>19<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightType</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Right type code (e.g. “lease”)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>20<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightRegistrationNumber</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Right registration number assigned by
+  office<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>21<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightRegistrationDate</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Registration date of the right<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>22<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>LeaseNumber</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Lease number assigned by Lease Services
+  department<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>23<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightStartDate</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Date when the right becomes effective.
+  For a lease is a beginning of lease term<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>24<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightExpirationDate</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Expiration date of the right. For a lease
+  is an end of lease term<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;height:13.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>25<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightExecutionDate</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:13.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>Lease execution date<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;height:15.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>26<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightholdersFormatted</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:15.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>Lists first 4 right holders names and
+  appends with <span class=GramE>“ and</span> others” in the case if there are
+  more than 4.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>27<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>LeaseGroundRent</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Lease ground rent amount<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>28<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>StampDuty</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Stamp duty amount<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>29<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>LeaseTransferDuty</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Lease transfer duty amount<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>30<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightRegistrationFee</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Right registration amount<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>31<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>LeasePersonalLevy</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Personal levy ratio. Can be between 1 and
+  2 or 0. Zero means ground rent exempted.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>32<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>LeaseLandUsable</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Percentage of usable land. Can be between
+  1 and 100.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33;height:12.75pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>33<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>LeaseLandUseCode</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span lang=EN-AU>Land use code defined for the lease. Can
+  be one of the following values:<o:p></o:p></span></p>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>agricultural<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>charitable<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>commercial<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>educational<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>hospital<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>hotel<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>industrial<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>petroleum<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>religious<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>residential<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>retail<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5'><span lang=EN-AU>warehouse<o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34;height:16.5pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:16.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>34<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:16.5pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightStatusDate</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:16.5pt'>
+  <p class=MsoNormal><span lang=EN-AU>System date when the status of right was
+  actually changed in the system. This date is very reliable in understanding
+  when the right was created or changed. For example if the right has
+  “historic” status, <span class=SpellE>RightStatusDate</span> indicates when
+  it became historic (terminated).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35;mso-yfti-lastrow:yes;height:42.0pt'>
+  <td width=74 valign=top style='width:55.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:3.6pt 5.75pt 3.6pt 5.75pt;height:42.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>35<o:p></o:p></span></p>
+  </td>
+  <td width=192 valign=top style='width:143.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:42.0pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-AU>RightStatus</span></span><span
+  lang=EN-AU><o:p></o:p></span></p>
+  </td>
+  <td width=366 valign=top style='width:274.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:3.6pt 5.75pt 3.6pt 5.75pt;
+  height:42.0pt'>
+  <p class=MsoNormal><span lang=EN-AU>Right status. Possible values:<o:p></o:p></span></p>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal style='mso-list:l3 level1 lfo4'><span lang=EN-AU>current
+       (active approved records)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l3 level1 lfo4'><span lang=EN-AU>historic
+       (terminated records)<o:p></o:p></span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+        </ol>
         
         <p><b>Also See</b></p>
         <ul>
-            <li><a href="../howtopics/finance_export.html" target="_top">Documents</a></li>
+            <li><a href="../howtotopics/finance_export.html" target="_top">Generate Finance Export</a></li>
         </ul>
         <br> 
     </body>

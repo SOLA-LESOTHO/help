@@ -7,18 +7,19 @@ PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
     <tocitem image="toplevelfolder" text="SOLA Desktop Help">
         <tocitem image="category" text="Solutions for Open Land Administration">
             <tocitem image="topic" target="sola_overview" text="Overview"/>
-            <tocitem image="topic" target="sola_overview" text="Overview"/>
+            <tocitem image="topic" target="licensing" text="SOLA Software Licence"/>
             <tocitem image="topic" target="sola_screens" text="Screens"/>
             <tocitem image="topic" target="logging" text="Logging"/>			
-            <tocitem image="topic" target="issues" text="Known Issues"/>	           <tocitem image="topic" target="sola_business_rules" text="SOLA Business Rules"/>
-            <tocitem image="topic" target="sola_business_rules" text="SOLA Business Rules"/>	           <tocitem image="topic" target="sola_business_rules" text="SOLA Business Rules"/>
-            <tocitem image="topic" target="finance_export_file_description" text="Finance Export File Descriptions"/>	           <tocitem image="topic" target="sola_business_rules" text="SOLA Business Rules"/>
+            <tocitem image="topic" target="issues" text="Known Issues"/>
+            <tocitem image="topic" target="sola_business_rules" text="SOLA Business Rules"/>
+            <tocitem image="topic" target="sola_business_rules" text="SOLA Business Rules"/>
+            <tocitem image="topic" target="finance_export_file_description" text="Finance Export File Descriptions"/>
         </tocitem>
         
         <tocitem image="category" text="SOLA Concepts">
+           <tocitem image="topic" target="application_lifecycle" text="SOLA Application Lifecycle"/>
            <tocitem image="topic" target="services" text="Services"/>
            <tocitem image="topic" target="service_lifecycle" text="Service Lifecycle"/>
-           <tocitem image="topic" target="application_lifecycle" text="Rights, Restrictions and Responsibilities (RRR)"/>
            <tocitem image="topic" target="rrr" text="Rights, Restrictions and Responsibilities (RRR)"/>
            <tocitem image="topic" target="documents" text="Documents"/>
            <tocitem image="topic" target="business_rules" text="Business Rules"/>
@@ -59,7 +60,7 @@ PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
             <tocitem image="topic" target="print_location_map" text="Print Location Map Service"/>	
             <tocitem image="topic" target="view_lodgement_report" text="View the Lodgement Report"/>	
             <tocitem image="topic" target="finance_export" text="Generate Finance Export File"/>
-            
+          
             <tocitem image="topic" target="add_document" text="Add Document"/>	
             <tocitem image="topic" target="add_file_attachment_new_document" text="Attach a File to a New Document"/>
             <tocitem image="topic" target="add_file_attachment_existing_document" text="Add or Update a File Attachment on an Existing Document"/>
@@ -87,7 +88,7 @@ PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
             <tocitem image="topic" target="mortgage_sublease" text="Register, Vary and Cancel Sublease Mortgage"/>
             <tocitem image="topic" target="register_servitude" text="Register, Vary and Cancel Servitude"/>
             <tocitem image="topic" target="record_dispute" text="Record Disputes and Court Cases"/>
-            <tocitem image="topic" target="power_of_attorney" text="Register Power of Attorney"/>
+            <tocitem image="topic" target="register_power_of_attorney" text="Register Power of Attorney"/>
             <tocitem image="topic" target="cancel_power_of_attorney" text="Cancel Power of Attorney"/>
             <tocitem image="topic" target="notarial_bond" text="Register Notarial Bond"/>
             <tocitem image="topic" target="cancel_notarial_bond" text="Cancel Notarial Bond"/>
@@ -101,7 +102,7 @@ PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
             <tocitem image="topic" target="create_subplot" text="Create a Subplot"/> 
             <tocitem image="topic" target="plan_image_for_digitising" text="Add a Plan Image for Digitizing"/> 
             <tocitem image="topic" target="import_survey_data" text="Import a Survey Data File"/> 
-            
+ <!-- Not used in SOLA Lesotho             
             <tocitem image="topic" target="add_location" text="Add Location for Application"/>
             <tocitem image="topic" target="add_ownership_details" text="Add Ownership Details to a Property"/>
             <tocitem image="topic" target="register_lease" text="Register Lease"/>
@@ -119,7 +120,7 @@ PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
             <tocitem image="topic" target="sys_reg_public_disp_plots" text="Prepare Public Display Plots"/>
             <tocitem image="topic" target="sys_reg_certificates" text="Prepare Registration Certificates"/>
             <tocitem image="topic" target="sys_reg_status_report" text="Prepare Status Work Reports"/>
-           
+ -->          
         </tocitem>
 		
     </tocitem>
