@@ -12,13 +12,13 @@
     <mapID target="topic" url="images/topic.gif" />
 
 <!-- Topics -->
-    <mapID target="overview" url="MainTopics/sola_overview.html" />
-    <mapID target="license" url="MainTopics/licensing.html" />
-    <mapID target="screens" url="MainTopics/sola_screens.html" />
+    <mapID target="sola_overview" url="MainTopics/sola_overview.html" />
+    <mapID target="licensing" url="MainTopics/licensing.html" />
+    <mapID target="sola_screens" url="MainTopics/sola_screens.html" />
     <mapID target="logging" url="MainTopics/logging.html" />
-    <mapID target="issues" url="MainTopics/known_issues.html" />
+    <mapID target="known_issues" url="MainTopics/known_issues.html" />
     <mapID target="sola_business_rules" url="MainTopics/sola_business_rules.html" />
-    <mapID target="finance_export_file_description" url="MainTopics/finance_export_description.html" />
+    <mapID target="finance_export_file_description" url="MainTopics/finance_export_file_description.html" />
     
     <mapID target="services" url="howtotopics/services.html" />
     <mapID target="service_lifecycle" url="howtotopics/service_lifecycle.html" /> 
