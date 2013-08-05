@@ -1,28 +1,30 @@
 /**
  * ******************************************************************************************
- * Copyright (C) 2012 - Food and Agriculture Organization of the United Nations (FAO).
- * All rights reserved.
+ * Copyright (C) 2012 - Food and Agriculture Organization of the United Nations
+ * (FAO). All rights reserved.
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- *    1. Redistributions of source code must retain the above copyright notice,this list
- *       of conditions and the following disclaimer.
- *    2. Redistributions in binary form must reproduce the above copyright notice,this list
- *       of conditions and the following disclaimer in the documentation and/or other
- *       materials provided with the distribution.
- *    3. Neither the name of FAO nor the names of its contributors may be used to endorse or
- *       promote products derived from this software without specific prior written permission.
+ * 1. Redistributions of source code must retain the above copyright notice,this
+ * list of conditions and the following disclaimer. 2. Redistributions in binary
+ * form must reproduce the above copyright notice,this list of conditions and
+ * the following disclaimer in the documentation and/or other materials provided
+ * with the distribution. 3. Neither the name of FAO nor the names of its
+ * contributors may be used to endorse or promote products derived from this
+ * software without specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
- * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,PROCUREMENT
- * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,STRICT LIABILITY,OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT,STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
  * *********************************************************************************************
  */
 package org.sola.common.help;
@@ -47,9 +49,11 @@ import org.sola.common.messaging.MessageUtility;
  */
 public class HelpUtility {
 
+    public static String DEFAULT_HELP_TOPIC = "sola_overview";
     private HelpSet helpSet = null;
     private HelpBroker helpBroker;
     private String helpTopicName;
+
     private HelpUtility() {
     }
 
@@ -62,21 +66,23 @@ public class HelpUtility {
         return HelpUtilityHolder.INSTANCE;
     }
 
-   /**
-     * Returns a <code>HelpSet<code/> for the construction of an ActionListener.
-     * @return Helpset 
+    /**
+     * Returns a
+     * <code>HelpSet<code/> for the construction of an ActionListener.
+     *
+     * @return Helpset
      */
     private HelpSet getHelpSet() {
         if (helpSet == null) {
             String pathToHS = "defaultlang/HelpSet.xml";
             String subpath = helpTopicName;
             String initsubpath = subpath.substring(0, 1);
-            
+
             if (initsubpath.contains("1")) {
-             String helpsetsubpath = subpath.substring(1, 5);
-             pathToHS = "defaultlang/HelpSet"+helpsetsubpath+".xml";   
+                String helpsetsubpath = subpath.substring(1, 5);
+                pathToHS = "defaultlang/HelpSet" + helpsetsubpath + ".xml";
             }
-            
+
             try {
                 URL hsURL = getClass().getResource(pathToHS);
                 LogUtility.log("Found HelpSet at " + pathToHS, Level.FINE);
@@ -91,17 +97,16 @@ public class HelpUtility {
         return helpSet;
     }
 
-
-
-    private HelpBroker getHelpBroker(){
-        if(helpBroker == null){
+    private HelpBroker getHelpBroker() {
+        if (helpBroker == null) {
             helpBroker = getHelpSet().createHelpBroker();
         }
         return helpBroker;
     }
-    
+
     /**
-     * Returns an <code>ActionListener<code/> for displaying help topics in a help viewer.
+     * Returns an
+     * <code>ActionListener<code/> for displaying help topics in a help viewer.
      *
      * @param object JButton to which the actionListener is registered to listen for events
      * @param contextMapID MapID of the topic to be displayed
@@ -111,19 +116,25 @@ public class HelpUtility {
         CSH.setHelpIDString(object, contextMapID);
         return new CSH.DisplayHelpFromSource(getHelpBroker());
     }
-    
-    /** 
-     * Enables help on the button. If button is clicked, help topic will be displayed. 
-     * @param object JButton to which the actionListener is registered to listen for events
+
+    /**
+     * Enables help on the button. If button is clicked, help topic will be
+     * displayed.
+     *
+     * @param object JButton to which the actionListener is registered to listen
+     * for events
      * @param contextMapID MapID of the topic to be displayed
      */
     public void registerHelpButton(JButton object, String contextMapID) {
         getHelpBroker().enableHelpOnButton(object, contextMapID, getHelpSet());
     }
-    
-    /** 
-     * Enables help on the button. If button is clicked, help topic will be displayed. 
-     * @param object JMenuItem to which the actionListener is registered to listen for events
+
+    /**
+     * Enables help on the button. If button is clicked, help topic will be
+     * displayed.
+     *
+     * @param object JMenuItem to which the actionListener is registered to
+     * listen for events
      * @param contextMapID MapID of the topic to be displayed
      */
     public void registerHelpMenu(JMenuItem object, String contextMapID) {
@@ -131,14 +142,17 @@ public class HelpUtility {
         getHelpBroker().enableHelpOnButton(object, contextMapID, getHelpSet());
     }
 
-    /** Registers provided panel to display help topic upon F1 key press. */
+    /**
+     * Registers provided panel to display help topic upon F1 key press.
+     */
     public void registerHelpKey(JPanel object, String contextMapID) {
         this.helpTopicName = contextMapID;
         getHelpBroker().enableHelpKey(object, contextMapID, getHelpSet());
     }
-    
+
     /**
-     * Returns an <code>ActionListener<code/> for displaying help topics in a help viewer.
+     * Returns an
+     * <code>ActionListener<code/> for displaying help topics in a help viewer.
      *
      * @param object JMenuItem to which the actionListener is registered to listen for events
      * @param contextMapID MapID of the topic to be displayed
@@ -148,16 +162,18 @@ public class HelpUtility {
         CSH.setHelpIDString(object, contextMapID);
         return new CSH.DisplayHelpFromSource(getHelpBroker());
     }
-    
-    public void showTopic(String contextMapID){
-       helpTopicName = contextMapID;
-       if(getHelpBroker().isDisplayed()){
-            getHelpBroker().setCurrentID(contextMapID); 
+
+    public void showTopic(String contextMapID) {
+        if (contextMapID == null || contextMapID.trim().isEmpty()) {
+            contextMapID = DEFAULT_HELP_TOPIC;
+        }
+        helpTopicName = contextMapID;
+        if (getHelpBroker().isDisplayed()) {
+            getHelpBroker().setCurrentID(contextMapID);
         } else {
             getHelpBroker().initPresentation();
             getHelpBroker().setCurrentID(contextMapID);
         }
-        ((javax.help.DefaultHelpBroker)getHelpBroker()).setDisplayed(true);
+        ((javax.help.DefaultHelpBroker) getHelpBroker()).setDisplayed(true);
     }
-
 }
